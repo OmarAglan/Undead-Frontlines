@@ -25,7 +25,7 @@ namespace MainMenuUICode.MainCode
             else
             {
                 wrongAnimator.Play("Notification In");
-                //soundScript.Notification();
+                soundScript.Notification();
             }
         }
 

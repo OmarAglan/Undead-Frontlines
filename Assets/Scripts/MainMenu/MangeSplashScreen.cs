@@ -15,7 +15,7 @@ namespace MainMenuUICode.MainCode
 
         [Header("Settings")]
         public bool isLogged;
-        public bool alwaysShowSplashScreen;
+        public bool alwaysShowLoginScreen = true;
         public bool disableSplashScreen;
 
         /// <summary>
@@ -24,7 +24,51 @@ namespace MainMenuUICode.MainCode
         /// </summary>
         void Start()
         {
+            if (disableSplashScreen == true)
+            {
+                splashScreen.SetActive(false);
+                splashScreenLogin.SetActive(false);
+                splashScreenRegister.SetActive(false);
+                mainPanels.SetActive(true);
 
+                mainPanelsAnimator = mainPanels.GetComponent<Animator>();
+                mainPanelsAnimator.Play("Main Panel Opening");
+
+            }
+            else if (isLogged == false && alwaysShowLoginScreen == true)
+            {
+                splashScreen.SetActive(false);
+                splashScreenLogin.SetActive(true);
+                splashScreenRegister.SetActive(true);
+            }
+
+            else if (isLogged == false && alwaysShowLoginScreen == false)
+            {
+                splashScreen.SetActive(false);
+                splashScreenLogin.SetActive(true);
+                splashScreenRegister.SetActive(true);
+            }
+
+            else if (isLogged == false && alwaysShowLoginScreen == false)
+            {
+                splashScreen.SetActive(false);
+                splashScreenLogin.SetActive(true);
+                splashScreenRegister.SetActive(true);
+            }
+
+            else if (isLogged == true && alwaysShowLoginScreen == true)
+            {
+                splashScreen.SetActive(false);
+                splashScreenLogin.SetActive(true);
+                splashScreenRegister.SetActive(true);
+            }
+
+            else if (isLogged == true && alwaysShowLoginScreen == false)
+            {
+                splashScreen.SetActive(true);
+                splashScreenLogin.SetActive(false);
+                splashScreenRegister.SetActive(false);
+            }
         }
     }
 }
