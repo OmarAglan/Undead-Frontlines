@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MainMenuUICode.MainCode
 {
-    public class SwitchingMainPanels : MonoBehaviour
+    public class SwitchToMainPanels : MonoBehaviour
     {
         [Header("RESOURCES")]
         private Animator loginScreenAnimator;
@@ -28,7 +28,7 @@ namespace MainMenuUICode.MainCode
             }
         }
 
-        public void Animator()
+        public void Animate()
         {
             loginScreenAnimator = GetComponent<Animator>();
             if (isLoginScreen == false)

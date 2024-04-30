@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace MainMenuUICode.MainCode
 {
-    public class SoundElement : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
+    public class UIElementSound : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
     {
         [Header("RESOURCES")]
         public AudioClip hoverSound;

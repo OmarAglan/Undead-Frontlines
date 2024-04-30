@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 namespace MainMenuUICode.MainCode
 {
-    public class LoginManager : MonoBehaviour
+    public class LoginUserManager : MonoBehaviour
     {
         [Header("RESOURCES")]
-        public SwitchingMainPanels switchingMainPanels;
-        public SoundElement soundScript;
+        public SwitchToMainPanels switchPanelMain;
+        public UIElementSound soundScript;
         public Animator wrongAnimator;
-        public Text usernametext;
-        public Text passwordtext;
+        public Text usernameText;
+        public Text passwordText;
 
         [Header("Settings")]
         public string username;
@@ -18,9 +18,9 @@ namespace MainMenuUICode.MainCode
 
         public void Login()
         {
-            if (usernametext.text == username && passwordtext.text == password)
+            if (usernameText.text == username && passwordText.text == password)
             {
-                switchingMainPanels.Animator();
+                switchPanelMain.Animate();
             }
             else
             {
